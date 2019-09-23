@@ -1,17 +1,11 @@
-<div class="w3agile-ftr-top">
+<div class="w3agile-ftr-top" style="margin-top: 4rem;">
 		<div class="container">
 			<div class="ftr-toprow">
-				<!-- <div class="col-md-4 ftr-top-grids">
-					<div class="ftr-top-left">
-						<i class="fas fa-city"></i>
-					</div> 
+				<div class="col-md-12 ftr-top-grids">
 					<div class="ftr-top-right">
-						<h4>FREE DELIVERY</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempus justo ac </p>
+						<h4 style="padding-left: 6rem;"><a href="#" style="cursor: pointer; color: white;">Festival Seni Sriwijaya Tahun 2019</a></h4>
 					</div> 
-					<div class="clearfix"> </div>
-				</div>  -->
-				<div class="clearfix"> </div>
+				</div>
 			</div>
 		</div>
   </div>
@@ -23,15 +17,6 @@
 				<ul>
 					<li><a href="#" class="fa fa-facebook icon facebook"> </a></li>
 					<li><a href="#" class="fa fa-twitter icon twitter"> </a></li>
-					<li><a href="#" class="fa fa-google-plus icon googleplus"> </a></li>
-					<li><a href="#" class="fa fa-dribbble icon dribbble"> </a></li>
-					<li><a href="#" class="fa fa-rss icon rss"> </a></li> 
-				</ul> 
-				<ul class="apps"> 
-					<li><h4>Download Our app : </h4> </li>
-					<li><a href="#" class="fa fa-apple"></a></li>
-					<li><a href="#" class="fa fa-windows"></a></li>
-					<li><a href="#" class="fa fa-android"></a></li>
 				</ul> 
 			</div>
 			<div class="clearfix"> </div>

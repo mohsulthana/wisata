@@ -89,16 +89,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<li class="dropdown head-dpdn">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user" aria-hidden="true"></i> My Account<span class="caret"></span></a>
 						<ul class="dropdown-menu">
-							<li><a href="login.html">Login </a></li> 
-							<li><a href="signup.html">Sign Up</a></li> 
+							<li><a href="<?= base_url();?>authentication/login">Login </a></li> 
+							<li><a href="<?= base_url();?>authentication/signup">Sign Up</a></li> 
 						</ul> 
 					</li> 
-					
-					
-					<li class="dropdown head-dpdn">
-						<a href="contact.html" class="dropdown-toggle"><i class="fa fa-map-marker" aria-hidden="true"></i>Find Me</a>
-					</li> 
-					
 				</ul>
 			</div>
 			<div class="clearfix"> </div> 
@@ -121,13 +115,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<div class="my-account">
 						<a href="contact.html"><i class="fa fa-map-marker" aria-hidden="true"></i> CONTACT US</a>						
 					</div>
-					<div class="cart"> 
-						<form action="#" method="post" class="last"> 
-							<input type="hidden" name="cmd" value="_cart" />
-							<input type="hidden" name="display" value="1" />
-							<button class="w3view-cart" type="submit" name="submit" value=""><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></button>
-						</form>  
-					</div>
 					<div class="clearfix"> </div> 
 				</div> 
 				<div class="clearfix"> </div>
@@ -137,7 +124,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="container">
 				<div class="menu">
 					<div class="cd-dropdown-wrapper">
-						<a class="cd-dropdown-trigger" href="#0">Daftar Kebutuhan</a>
+						<a class="cd-dropdown-trigger" href="#0">Explore Palembang</a>
 						<nav class="cd-dropdown"> 
 							<a href="#0" class="cd-close">Close</a>
 							<ul class="cd-dropdown-content"> 
@@ -213,9 +200,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<ul>
 					<li><a href="#" class="fa fa-facebook icon facebook"> </a></li>
 					<li><a href="#" class="fa fa-twitter icon twitter"> </a></li>
-					<li><a href="#" class="fa fa-google-plus icon googleplus"> </a></li>
-					<li><a href="#" class="fa fa-dribbble icon dribbble"> </a></li>
-					<li><a href="#" class="fa fa-rss icon rss"> </a></li> 
 				</ul> 
 			</div>
 		</div>
