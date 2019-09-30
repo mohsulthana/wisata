@@ -10,6 +10,9 @@ class Home extends MY_Controller {
   {
     $data['title'] = 'HOME | Dinas Kebudayaan & Pariwisata Kota Palembang';
     $data['content'] = 'home';
+    $data['wisata']     = $this->db->get('wisata')->result_array();
+    $data['acara']      = $this->db->get('acara')->result_array();
+
     $this->template($data);
   }
 }

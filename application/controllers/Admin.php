@@ -50,11 +50,13 @@ class Admin extends MY_Controller {
       foreach ($field as $key => $value) {
         $data[$value] = $this->input->post($value);
       }
-           
+
       $this->db->insert('wisata', $data);
       $id = $this->db->insert_id();
+
       if(isset($_FILES)) {
         $this->do_upload($id);
+        $this->db->set('foto', $_FILES['foto']['name'])->where('id', $id)->update('wisata');
       } 
       echo "<script type='text/javascript'>alert('Sukses Tambah Data');</script>";      
       redirect('admin/wisata','refresh');
@@ -113,7 +115,8 @@ class Admin extends MY_Controller {
       $field = ['nama_acara', 'tanggal', 'lokasi_acara'];
       foreach ($field as $key => $value) {
         $data[$value] = $this->input->post($value);
-      }      
+      }
+
       $this->db->insert('acara', $data);
       echo "<script type='text/javascript'>alert('Sukses Tambah Data');</script>";      
       redirect('admin/acara','refresh');
