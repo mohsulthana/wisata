@@ -53,7 +53,7 @@
             <div class="new-tag"><h6><?= $value['jenis'];?></h6></div>
             <a href="<?= base_url('Wisata/detail_wisata/' . $value['id']);?>"><img src="<?= $value['foto'] ?  './uploads/' . $value['id'] . '.jpg' :  asset_url('image/masjidagung.jpg') ?>" alt="img"></a>
             <div class="view-caption agileits-w3layouts">           
-              <h4><a href="products1.html"><?= $value['nama'];?></a></h4>
+              <h4><a href="<?= base_url('Wisata/detail_wisata/' . $value['id']);?>"><?= $value['nama'];?></a></h4>
               <p><?= $value['alamat'];?></p>
               <h5><?= $value['kabupaten'];?></h5>
               <form action="#" method="post">
