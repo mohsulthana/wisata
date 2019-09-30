@@ -1,3 +1,44 @@
+    	<!-- banner -->
+			<div class="banner">
+		<div id="kb" class="carousel kb_elastic animate_text kb_wrapper" data-ride="carousel" data-interval="6000" data-pause="hover">
+			<!-- Wrapper-for-Slides -->
+        <div class="carousel-inner" role="listbox">  
+            <div class="item active"><!-- First-Slide -->
+                <img src="<?= asset_url();?>image/Ampera.jpg" alt="" class="img-responsive" />
+                <div class="carousel-caption kb_caption kb_caption_right">
+                    <h3 data-animation="animated flipInX">Kota Palembang</h3>
+                    <h4 data-animation="animated flipInX">Pesona Indonesia</h4>
+                </div>
+            </div>  
+            <div class="item"> <!-- Second-Slide -->
+              <img src="<?= asset_url();?>image/monpera.jpg" alt="" class="img-responsive" />
+                <div class="carousel-caption kb_caption kb_caption_right">
+                    <h3 data-animation="animated fadeInDown">Monpera</h3>
+                    <h4 data-animation="animated fadeInUp">Monumen Perjuangan Rakyat</h4>
+                </div>
+            </div> 
+            <div class="item"><!-- Third-Slide -->
+              <img src="<?= asset_url();?>image/belido.jpg" alt="" class="img-responsive" />
+                <div class="carousel-caption kb_caption kb_caption_center">
+                    <h3 data-animation="animated fadeInLeft">Momumen Belido</h3>
+                    <h4 data-animation="animated flipInX">Spesies ikan Palembang</h4>
+                </div>
+            </div> 
+        </div> 
+        <!-- Left-Button -->
+        <a class="left carousel-control kb_control_left" href="#kb" role="button" data-slide="prev">
+          <span class="fa fa-angle-left kb_icons" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a> 
+        <!-- Right-Button -->
+        <a class="right carousel-control kb_control_right" href="#kb" role="button" data-slide="next">
+            <span class="fa fa-angle-right kb_icons" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a> 
+        </div>
+		  <script src="<?= asset_url();?>js/custom.js"></script>
+	  </div>
+	</div>
 <div class="container">
   <div class="row m-4">
     <div class="col-lg-12">
@@ -8,7 +49,7 @@
 					<?php foreach($acara as $key => $value) {?>
 						<div class="deals-row">
 							<div class="col-md-4 focus-grid"> 
-								<a href="products.html" class="wthree-btn"> 
+								<a href="<?= base_url('Acara/detail_acara/' . $value['id_acara']);?>" class="wthree-btn"> 
 									<div class="focus-image">
 										<h4 class="clrchg"><?= $value['nama_acara'];?></h4> 
 									</div>
@@ -30,9 +71,9 @@
 									<div class="item">
 										<div class="glry-w3agile-grids agileits">
 											<div class="new-tag"><h6><?= $value['jenis'];?></h6></div>
-											<a href="products.html"><img src="<?= $value['foto'] ?  './uploads/' . $value['id'] . '.jpg' :  'assets/image/masjidagung.jpg' ?>" alt="img"></a>
+											<a href="<?= base_url('Wisata/detail_wisata/' . $value['id']);?>"><img src="<?= $value['foto'] ?  './uploads/' . $value['id'] . '.jpg' :  'assets/image/masjidagung.jpg' ?>" alt="img"></a>
 											<div class="view-caption agileits-w3layouts">           
-												<h4><a href="products.html"><?= $value['nama']; ?></a></h4>
+												<h4><a href="<?= base_url('Wisata/detail_wisata/' . $value['id']);?>"><?= $value['nama']; ?></a></h4>
 												<p><?= $value['alamat'];?></p>
 												<h5><?= $value['kabupaten'];?></h5> 
 												<form action="#" method="post">
