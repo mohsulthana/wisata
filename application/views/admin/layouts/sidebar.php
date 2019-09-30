@@ -32,12 +32,12 @@
           </a>
         </li>
         <li>
-          <a href="<?= base_url('Acara');?>">
+          <a href="<?= base_url('admin/acara');?>">
             <i class="fa fa-plus"></i> <span>Acara</span>
           </a>
         </li>
         <li>
-          <a href="<?= base_url('Wisata');?>">
+          <a href="<?= base_url('admin/wisata');?>">
             <i class="fa fa-list"></i> <span>Wisata</span>
           </a>
         </li>

@@ -16,7 +16,8 @@
     <section class="content">
     <div class="row">
         <div class="col-xs-12">
-          <div class="box">
+        <a class="btn btn-success text-lg" href="<?= base_url('admin/add_wisata') ?>">+Tambah Wisata</a>
+          <div class="box">          
             <div class="box-header">
               <h3 class="box-title">Tabel wisata</h3>
             </div>
@@ -27,27 +28,30 @@
                 <tr>
                   <th>No</th>
                   <th>Nama wisata</th>
-                  <th>Tanggal pelaksanaan</th>
-                  <th>Tempat</th>
-                  <th>Penyelenggara</th>
+                  <th>Jenis</th>
+                  <th>Alamat</th>
+                  <th>Kabupaten</th>
                   <th>Aksi</th>
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                  <td>Trident</td>
-                  <td>Internet
-                    Explorer 4.0
-                  </td>
-                  <td>Win 95+</td>
-                  <td> 4</td>
-                  <td>X</td>
-                </tr>
+                  <?php $i=1; foreach($wisata as $d) : ?>
+                  <tr>
+                    <td><?= $i++ ?></td>
+                    <td><?= $d->nama ?></td>
+                    <td><?= $d->jenis ?></td>
+                    <td><?= $d->alamat ?></td>
+                    <td><?= $d->kabupaten ?></td>
+                    <td><a href="<?= base_url('admin/edit_wisata/'.$d->id) ?>">Edit</a>|<a class="text-danger" href="<?= base_url('admin/delete_wisata/'.$d->id) ?>">Delete</a></td>
+                  </tr>
+                  <?php endforeach; ?>
                 </tbody>
               </table>
             </div>
             <!-- /.box-body -->
           </div>
+        </div>
+      </div>
     </section>
     <!-- /.content -->
   </div>
