@@ -181,8 +181,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<div class="container"> 
 			<h3 class="w3ls-title w3ls-title1">Login to your account</h3>  
 			<div class="login-body">
-				<form action="#" method="post">
-					<input type="text" class="user" name="email" placeholder="Enter your email" required="">
+				<form action="<?= base_url('Authentication/do_login');?>" method="post">
+					<input type="text" class="user" name="username" placeholder="Enter your email" required="">
 					<input type="password" name="password" class="lock" placeholder="Password" required="">
 					<input type="submit" value="Login">
 					<div class="forgot-grid">
@@ -194,7 +194,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					</div>
 				</form>
 			</div>  
-			<h6> Not a Member? <a href="signup.html">Sign Up Now »</a> </h6> 
+			<h6> Not a Member? <a href="<?= base_url('Authentication/signup');?>">Sign Up Now »</a> </h6> 
 			<div class="login-page-bottom social-icons">
 				<h5>Recover your social account</h5>
 				<ul>

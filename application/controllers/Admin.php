@@ -4,6 +4,10 @@ class Admin extends MY_Controller {
   public function __construct()
   {
     parent::__construct();
+    if ($this->session->userdata()['status'] != "logged in") {
+      $this->flashmsg('Anda harus login untuk masuk ke halaman admin.', 'danger');
+      redirect('Authentication/login');
+    }
   }
 
   public function index()
@@ -13,11 +17,17 @@ class Admin extends MY_Controller {
     $this->admin_template($this->data);
   }
 
+  public function logout()
+  {
+    $this->session->unset_userdata('status');
+    redirect('/');
+  }
+
   public function wisata()
   {
     $this->data['wisata'] = $this->db->get('wisata')->result();
     
-    $this->data['title']      = 'Menu wisata';
+    $this->data['title']      = 'Wisata';
     $this->data['content']    = 'admin/wisata';
     $this->admin_template($this->data);
   }
@@ -79,7 +89,7 @@ class Admin extends MY_Controller {
   {
     $this->data['acara'] = $this->db->get('acara')->result();
     
-    $this->data['title']      = 'Menu acara';
+    $this->data['title']      = 'Acara';
     $this->data['content']    = 'admin/acara';
     $this->admin_template($this->data);
   }
@@ -94,7 +104,7 @@ class Admin extends MY_Controller {
       }
       $this->db->where('id_acara',$id);
       $this->db->update('acara', $data);
-      if(isset($_FILES)) {
+      if(!empty($_FILES)) {
         @unlink('/uploads/'.$id);
         $this->do_upload($id);
       }
@@ -147,7 +157,6 @@ class Admin extends MY_Controller {
     if ( ! $this->upload->do_upload('foto'))
     {
       $error = array('error' => $this->upload->display_errors());
-
       echo $error; exit;
     }
   }

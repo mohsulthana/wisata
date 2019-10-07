@@ -4,11 +4,11 @@ class Acara extends MY_Controller {
   public function __construct()
   {
     parent::__construct();
+    $this->data['title']      = 'Acara';
   }
 
   public function index()
   {
-    $this->data['title']      = 'Menu acara';
     $this->data['content']    = 'admin/acara';
     $this->admin_template($this->data);
   }

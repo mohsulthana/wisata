@@ -8,7 +8,9 @@
           <img src="<?= asset_url();?>admin/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>Alexander Pierce</p>
+          <p><?php
+          $name = $this->db->get_where('user', ['id' => $this->session->userdata()['id']])->result();
+           echo $name[0]->name;?></p>
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
       </div>
@@ -26,17 +28,17 @@
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">MAIN NAVIGATION</li>
-        <li class="active">
+        <li class="<?= ($title == 'Dashboard') ? 'active' : '';?>">
           <a href="<?= base_url('Admin');?>">
             <i class="fa fa-dashboard"></i> <span>Dashboard</span>
           </a>
         </li>
-        <li>
+        <li class="<?= ($title == 'Acara') ? 'active' : '';?>">
           <a href="<?= base_url('admin/acara');?>">
             <i class="fa fa-plus"></i> <span>Acara</span>
           </a>
         </li>
-        <li>
+        <li class="<?= ($title == 'Wisata') ? 'active' : '';?>">
           <a href="<?= base_url('admin/wisata');?>">
             <i class="fa fa-list"></i> <span>Wisata</span>
           </a>

@@ -953,9 +953,9 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 		<div class="container"> 
 			<h3 class="w3ls-title w3ls-title1">Create your account</h3>  
 			<div class="login-body">
-				<form action="#" method="post">
+				<form action="<?= base_url('Authentication/do_signup');?>" method="post">
 					<input type="text" class="user" name="name" placeholder="Enter your Name" required="">
-					<input type="text" class="user" name="email" placeholder="Enter your email" required="">
+					<input type="text" class="user" name="username" placeholder="Enter your username" required="">
 					<input type="password" name="password" class="lock" placeholder="Password" required="">
 					<input type="submit" value="Sign Up ">
 					<div class="forgot-grid">
