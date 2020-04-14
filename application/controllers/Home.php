@@ -15,4 +15,13 @@ class Home extends MY_Controller {
 
     $this->template($data);
   }
+
+  public function detail_acara()
+  {
+    $data['title']        = 'Daftar acara | Dinas Kebudayaan & Pariwisata Kota Palembang';
+    $data['content']      = 'pages/daftar_acara';
+    $data['acara']        = $this->db->get('acara')->result_array();
+
+    $this->template($data);
+  }
 }
