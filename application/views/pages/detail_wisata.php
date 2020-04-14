@@ -2,8 +2,8 @@
         <div class="flexslider">
           <ul class="slides">
             <?php foreach($wisata as $value) {?>
-            <li data-thumb="./uploads/wisata/<?= $value['foto'];?>">
-              <div class="thumb-image detail_images"> <img src="./uploads/wisata/<?= $value['foto'];?>" data-imagezoom="true" class="img-responsive" alt=""></div>
+            <li data-thumb="<?= FCPATH ?>uploads\<?= $value['foto'];?>">
+              <div class="thumb-image detail_images"> <img src="<?= FCPATH ?>uploads\<?= $value['foto'];?>" data-imagezoom="true" class="img-responsive" alt=""></div>
             </li>
             <?php }; ?>
           </ul>

@@ -59,6 +59,9 @@
 						</div>
 						<?php } ?>
 					</div>
+					<div class="text-center">
+						<a class="btn btn-primary" href="<?= base_url('Home/detail_acara');?>">Tampilkan lebih banyak lagi</a>
+					</div>
 				</div>
 			</div>
       <div class="row">
@@ -71,7 +74,7 @@
 									<div class="item">
 										<div class="glry-w3agile-grids agileits">
 											<div class="new-tag"><h6><?= $value['jenis'];?></h6></div>
-											<a href="<?= base_url('Wisata/detail_wisata/' . $value['id']);?>"><img src="<?= $value['foto'] ?  './uploads/' . $value['id'] . '.jpg' :  'assets/image/masjidagung.jpg' ?>" alt="img"></a>
+											<a href="<?= base_url('Wisata/detail_wisata/' . $value['id']);?>"><img src="<?= $value['foto'] ?  'uploads/' . $value['foto'] :  'assets/image/masjidagung.jpg' ?>" alt="img"></a>
 											<div class="view-caption agileits-w3layouts">           
 												<h4><a href="<?= base_url('Wisata/detail_wisata/' . $value['id']);?>"><?= $value['nama']; ?></a></h4>
 												<p><?= $value['alamat'];?></p>

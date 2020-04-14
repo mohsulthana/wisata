@@ -47,26 +47,26 @@
         }); 
       </script>
       <div id="owl-demo5" class="owl-carousel">
-        <?php foreach($wisata as $value) {?>
-        <div class="item">
-          <div class="glry-w3agile-grids agileits">
-            <div class="new-tag"><h6><?= $value['jenis'];?></h6></div>
-            <a href="<?= base_url('Wisata/detail_wisata/' . $value['id']);?>"><img src="<?= $value['foto'] ?  './uploads/' . $value['id'] . '.jpg' :  asset_url('image/masjidagung.jpg') ?>" alt="img"></a>
-            <div class="view-caption agileits-w3layouts">           
-              <h4><a href="<?= base_url('Wisata/detail_wisata/' . $value['id']);?>"><?= $value['nama'];?></a></h4>
-              <p><?= $value['alamat'];?></p>
-              <h5><?= $value['kabupaten'];?></h5>
-              <form action="#" method="post">
-                <input type="hidden" name="cmd" value="_cart" />
-                <input type="hidden" name="add" value="1" /> 
-                <input type="hidden" name="w3ls_item" value="<?= $value['nama'];?>" /> 
-                <input type="hidden" name="amount" value="20.00" /> 
-                <button type="submit" class="w3ls-cart" ><i class="fa fa-cart-plus" aria-hidden="true"></i> Add to cart</button>
-              </form>
-            </div>        
-          </div> 
-        </div>
-        <?php }; ?>
+        <?php foreach($wisata as $key => $value) {?>
+          <div class="item">
+            <div class="glry-w3agile-grids agileits">
+              <div class="new-tag"><h6><?= $value['jenis'];?></h6></div>
+              <a href="<?= base_url('Wisata/detail_wisata/' . $value['id']);?>"><img src="<?= $value['foto'] ?  'uploads/' . $value['foto'] :  'assets/image/masjidagung.jpg' ?>" alt="img"></a>
+              <div class="view-caption agileits-w3layouts">
+                <h4><a href="<?= base_url('Wisata/detail_wisata/' . $value['id']);?>"><?= $value['nama']; ?></a></h4>
+                <p><?= $value['alamat'];?></p>
+                <h5><?= $value['kabupaten'];?></h5> 
+                <form action="#" method="post">
+                  <input type="hidden" name="cmd" value="_cart" />
+                  <input type="hidden" name="add" value="1" /> 
+                  <input type="hidden" name="w3ls_item" value="<?= $value['nama']; ?>" /> 
+                  <input type="hidden" name="amount" value="100.00" /> 
+                  <button type="submit" class="w3ls-cart" ><i class="fa fa-cart-plus" aria-hidden="true"></i> Add to cart</button>
+                </form>  
+              </div>   
+            </div>   
+          </div>
+				<?php }; ?>
       </div>    
     </div>
   </div>
